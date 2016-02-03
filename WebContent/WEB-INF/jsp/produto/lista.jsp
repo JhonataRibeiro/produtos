@@ -59,6 +59,8 @@
 			</c:forEach>
 	
 	</table>
-	<a href="/produtos/produto/formulario">Adicionar um produto</a>
+	<!-- A jstl url nos auxilia ao criar url's com base no root context da aplicação -->
+	<c:url value="/produto/formulario" var="urlAdicionar"/>
+	<a href="${urlAdicionar}">Adicionar um produto</a>
 </body>
 </html>
