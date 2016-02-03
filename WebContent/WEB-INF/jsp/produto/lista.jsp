@@ -38,6 +38,23 @@
 				<td>${produto.preco}</td>
 				<td>${produto.descricao}</td>
 				<td>${produto.dataInicioVenda.time}</td>
+				<c:if test="${produto.usado}"><td>Sim</td></c:if>
+				<c:if test="${not produto.usado}"><td>Não</td></c:if>
+				
+				<!-- 
+				
+				Outra maneira de fazer condições
+				
+				<c:choose>
+				<c:when test="${produto.usado}">
+				<td>Sim</td>
+				</c:when>
+				
+				<c:otherwise>
+				<td>Não</td>
+				</c:otherwise>
+				</c:choose>
+				 -->
 			</tr>
 			</c:forEach>
 	
