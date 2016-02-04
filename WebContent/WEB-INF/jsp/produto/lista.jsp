@@ -20,9 +20,10 @@
 	</script>
 
 	<h1>Produtos</h1>
+	<h2><fmt:message key="mensagem.bemvindo"/></h2>
 	<div id="mensagem"></div>
 	<table width="100%">
-		<tr>
+		<tr>mensagem.bemvindo
 			<td>Id</td>
 			<td width="20%">Nome</td>
 			<td>Preco</td>
@@ -64,6 +65,9 @@
 	</table>
 	<!-- A jstl url nos auxilia ao criar url's com base no root context da aplicação -->
 	<c:url value="/produto/formulario" var="urlAdicionar"/>
-	<a href="${urlAdicionar}">Adicionar um produto</a>
+	<a href="${urlAdicionar}"><fmt:message key="mensagem.novoProduto"/></a>
+	
+	<c:import url="../common/rodape.jsp"></c:import>
+	
 </body>
 </html>
